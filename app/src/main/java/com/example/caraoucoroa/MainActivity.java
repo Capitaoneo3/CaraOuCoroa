@@ -23,10 +23,12 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent ac_Resultado = new Intent(getApplicationContext(), Activity_resultado.class );
-                int numero =(int) new Random().nextInt();
+                Intent intent_resultado = new Intent(getApplicationContext(), Activity_resultado.class );
+                int numero =(int) new Random().nextInt(2);//0 1
+                //passando dados para próxima tela
+                intent_resultado.putExtra("numero",numero);
 
-                startActivity(ac_Resultado) ;
+                startActivity(intent_resultado) ;
 
             }
         });
